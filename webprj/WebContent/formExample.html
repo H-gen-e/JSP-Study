@@ -22,9 +22,19 @@
 성별 : <input type="radio" name="gender" value="1">남
 	  <input type="radio" name="gender" value="2">여<br>
 이메일 : <input type="email" name="email"><br>
-전화번호 : <input type="tel" name="tel"><br>
-
-<br>
+<!-- input 태그의 tel 속성에는 전화번호를 받기 위한 패턴이 등장함
+        이때, 정규표현식에 대한 이해가 필요함  
+     - ^ : 시작임을 명시      $ : 끝임을 명시      \d or [0-9] : 정수 -->
+전화번호 : <input type="tel" name="tel" pattern="^[0][1][0]-\d{4}-\d{4}$"><br>
+학년 : <input type="number" name="grade" min="1" max="4" step="1"><br>
+지역 : <select name="area">
+		<option value="1">서울</option>
+		<option value="2">경기</option>
+		<option value="3">인천</option>
+	 </select><br>
+자기소개 : <textarea rows="5" cols="20" name="intro">
+자기소개를 적어주세요.
+</textarea><br><br>
 <input type="submit" value="전송">
 </form>
 </body>
