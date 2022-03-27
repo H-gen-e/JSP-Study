@@ -59,13 +59,13 @@ public class EmpDAO {
 				emp.setFirstName(rs.getString("first_name"));
 				emp.setLastName(rs.getString("last_name"));
 				emp.setEmail(rs.getString("email"));
-				emp.setPhoneNumber(rs.getString("phoneNumber"));
-				emp.setHireDate(rs.getDate("hireDate"));
-				emp.setJobId(rs.getString("jobId"));
+				emp.setPhoneNumber(rs.getString("phone_Number"));
+				emp.setHireDate(rs.getDate("hire_Date"));
+				emp.setJobId(rs.getString("job_Id"));
 				emp.setSalary(rs.getDouble("salary"));
-				emp.setCommissionPct(rs.getDouble("commissionPct"));
-				emp.setManagerId(rs.getInt("managerId"));
-				emp.setDepartmentId(rs.getInt("departmentId"));
+				emp.setCommissionPct(rs.getDouble("commission_Pct"));
+				emp.setManagerId(rs.getInt("manager_Id"));
+				emp.setDepartmentId(rs.getInt("department_Id"));
 				empList.add(emp);
 			}
 		}catch (SQLException e) {
