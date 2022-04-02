@@ -20,7 +20,7 @@
 </tr>
 <%for(EmpVO emp : empList) { %>
 <tr>
-<td><%=emp.getEmployeeId() %>></td>
+<td><%=emp.getEmployeeId() %></td>
 <td><a href="/JDBC/Emp.do?action=view&empId=<%=emp.getEmployeeId()%>"><%=emp.getFirstName() %><%=emp.getLastName() %></a></td>
 <td><%=emp.getEmail() %></td>
 <td><%=emp.getPhoneNumber() %></td>

@@ -22,6 +22,7 @@
 <tr><td>매니저</td><td><%=emp.getManagerId() %></td></tr>
 <tr><td>부서</td><td><%=emp.getDepartmentId() %></td></tr>
 </table>
-<a href="/JDBC/Emp.do?action=update&empId=<%=emp.getEmployeeId()%>">사원 정보 수정</a> <a href="?JDBC/Emp.do?action=delete">사원 정보 삭제</a>
+<a href="/JDBC/Emp.do?action=update&empId=<%=emp.getEmployeeId()%>">사원 정보 수정</a> 
+<a href="/JDBC/Emp.do?action=delete&empId=<%=emp.getEmployeeId()%>">사원 정보 삭제</a>
 </body>
 </html>

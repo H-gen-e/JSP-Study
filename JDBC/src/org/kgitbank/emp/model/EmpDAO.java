@@ -209,8 +209,6 @@ public class EmpDAO {
 			stmt.setInt(10, emp.getManagerId());
 			stmt.setInt(11, emp.getDepartmentId());
 			int result = stmt.executeUpdate(); // insert 는 결과값이 숫자 하나.
-			
-			
 		} catch (Exception e) {
 			if(e.getMessage().contains("0001")) { // error - 0001 은 입력한 데이터가 중복되는 경우.
 				e.printStackTrace();
@@ -221,14 +219,60 @@ public class EmpDAO {
 		}
 	}
 	
+	// 사원 정보 수정
+	public void updateEmp(EmpVO emp) {
+		Connection con = null;
+		
+		try {
+			con = getConnection();
+			String sql = "update employees set first_name=?, last_name=?, email=?,"
+					+ "phone_number=?, hire_date=?, job_id=?, salary=?,"
+					+ "commission_pct=?, manager_id=?, department_id=?"
+					+ "where employee_id=?";
+			PreparedStatement stmt = con.prepareStatement(sql);
+			stmt.setString(1, emp.getFirstName());
+			stmt.setString(2, emp.getLastName());
+			stmt.setString(3, emp.getEmail());
+			stmt.setString(4, emp.getPhoneNumber());
+			stmt.setDate(5, emp.getHireDate());
+			stmt.setString(6, emp.getJobId());
+			stmt.setDouble(7, emp.getSalary());
+			stmt.setDouble(8, emp.getCommissionPct());
+			stmt.setInt(9, emp.getManagerId());
+			stmt.setInt(10, emp.getDepartmentId());
+			stmt.setInt(11, emp.getEmployeeId());
+			int result = stmt.executeUpdate();
+			if(result <= 0) {
+				throw new RuntimeException("수정이 되지 않았습니다.");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if(con!=null) {try {con.close();}catch(SQLException e) {}}
+		}
+	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
+	// 사원 정보 삭제
+	public void deleteEmp(int empId) {
+		Connection con = null;
+		
+		try {
+			
+			con = getConnection();
+			String sql = "delete from employees where employee_id=?";
+			PreparedStatement stmt = con.prepareStatement(sql);
+			stmt.setInt(1, empId);
+			int result = stmt.executeUpdate();
+			if(result <= 0) {
+				throw new RuntimeException("삭제가 되지 않았습니다.");
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if(con!=null) {try {con.close();}catch(SQLException e) {}}
+		}
+	}
 
 }
