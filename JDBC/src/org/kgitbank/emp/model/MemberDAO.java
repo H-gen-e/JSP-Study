@@ -124,7 +124,7 @@ public class MemberDAO {
 		
 		try {
 			con = getConnection();
-			String sql = "delete from mamber where userid=?";
+			String sql = "delete from member where userid=?";
 			PreparedStatement stmt = con.prepareStatement(sql);
 			stmt.setString(1, userId);
 			int result = stmt.executeUpdate();
@@ -137,11 +137,31 @@ public class MemberDAO {
 		} finally {
 			if(con!=null) {try {con.close();}catch(SQLException e) {}}
 		}
-		
-		
 	}
 	
-	
+	// 회원 정보 수정
+	public void updateMem(MemberVO mem) {
+		Connection con = null;
+		
+		try {
+			con = getConnection();
+			String sql = "update member set userid=?, name=?, password=?, email=?, address=?";
+			PreparedStatement stmt = con.prepareStatement(sql);
+			stmt.setString(1, mem.getUserId());
+			stmt.setString(2, mem.getName());
+			stmt.setString(3, mem.getPassword());
+			stmt.setString(4, mem.getEmail());
+			stmt.setString(5, mem.getAddress());
+			int result = stmt.executeUpdate();
+			if(result <= 0) {
+				throw new RuntimeException("수정이 되지 않았습니다.");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if(con!=null) {try {con.close();}catch(SQLException e) {}}
+		}
+	}
 	
 	
 	

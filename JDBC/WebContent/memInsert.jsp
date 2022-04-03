@@ -9,8 +9,9 @@
 <title>회원 가입 페이지</title>
 </head>
 <body>
-<h2>회원 정보 입력</h2>
+<h2>회원 정보 수정</h2>
 <form action="/JDBC/Mem.do" method="post">
+<input type="hidden" name="action" value="insert">
 <table>
 <tr><td>아이디</td><td><input type="text" name="userid"></td></tr>
 <tr><td>이름</td><td><input type="text" name="name"></td></tr>
