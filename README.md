@@ -11,5 +11,8 @@ Spring 기술을 익히기 전, 좀 더 spring을 쉽게 이해할 수 있도록
   <li>JSP : view 에 대한 이해와 구현(간단한 HTML 까지)</li>
 </ul>
 
-<h3>결과물 : Oracle DB의 hr 테이블을 활용한 간단한 인사관리 시스템</h3>
-<h4>인사목록 / 자세한 인사정보 / 수정 / 입력 / 삭제<br>로그인 / 회원가입 / 회원 탈퇴</h4>
+<h3>토이 프로젝트 : 인사관리 시스템</h3>
+<h4>src : controller(인사제어/회원제어/로그인제어)<br>model(인사DB/회원DB)<br>filter<br>
+web content : 홈페이지/인사관리페이지/회원관리페이지/로그인페이지<br><br>
+  
+IDE : eclipse<br>Framework : JSP/Servlet, JAVA, EL/JSTL<br>DB : Oracle DB<br></h4>
