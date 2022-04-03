@@ -15,4 +15,4 @@ Spring 기술을 익히기 전, 좀 더 spring을 쉽게 이해할 수 있도록
 <h4>src : controller(인사제어/회원제어/로그인제어)<br>model(인사DB/회원DB)<br>filter<br>
 web content : 홈페이지/인사관리페이지/회원관리페이지/로그인페이지<br><br>
   
-IDE : eclipse<br>Framework : JSP/Servlet, JAVA, EL/JSTL<br>DB : Oracle DB<br></h4>
+IDE : eclipse<br>Framework : JSP/Servlet, JAVA, EL/JSTL, JDBC<br>DB : Oracle DB<br></h4>
