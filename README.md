@@ -6,7 +6,10 @@ Spring 기술을 익히기 전, 좀 더 spring을 쉽게 이해할 수 있도록
   
 <h3>공부할 내용<br>(web server 위의 프로그램 형성하기)</h3>
 <ul>
-  <li>Java class : DAO 에 대한 이해와 구현</li>
+  <li>Java class : DAO/VO 에 대한 이해와 구현</li>
   <li>Servlet : controller 에 대한 이해와 구현</li>
   <li>JSP : view 에 대한 이해와 구현(간단한 HTML 까지)</li>
 </ul>
+
+<h3>결과물 : Oracle DB의 hr 테이블을 활용한 간단한 인사관리 시스템</h3>
+<h4>인사목록 / 자세한 인사정보 / 수정 / 입력 / 삭제<br>로그인 / 회원가입 / 회원 탈퇴</h4>
